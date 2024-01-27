@@ -1,7 +1,6 @@
-import api_token
 import requests
 
-f = open("current_token.txt", "r")
+f = open("keys&tokens/current_token.txt", "r")
 access_token = f.readline()
 f.close()
 headers = {"Authorization": "Bearer " + access_token}
