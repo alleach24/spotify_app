@@ -1,12 +1,13 @@
 import requests
 import api_token
 
-# categories_obj_list = []
-
-
 access_token = api_token.check_active_token()
 headers = {"Authorization": "Bearer " + access_token}
 
+
+##########################################
+#### get_category_id_list
+# categories_obj_list = []
 url = "https://api.spotify.com/v1/browse/categories"
 country_code=["US"]
 payload = {"limit":50}
@@ -25,3 +26,4 @@ for category in categories_list:
 # f1 = open("info/categories_list.txt", "w")
 # f1.write(str(categories_obj_list))
 f1.close()
+##########################################
